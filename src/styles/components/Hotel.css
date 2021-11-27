@@ -1,0 +1,23 @@
+.homes__item {
+    display: flex;
+    width: 24%;
+    flex-direction: column;
+    row-gap: 18px;
+}
+.homes__img-wrapper img{
+    width: 295px;
+    height: 295px;
+}
+.homes__aparts-name {
+    font-size: 24px;
+    color: #3077C6;
+}
+.homes__aparts-location {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #BFBFBF;
+}
