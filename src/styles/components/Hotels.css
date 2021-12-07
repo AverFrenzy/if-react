@@ -1,0 +1,7 @@
+.homes__img-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 16px;
+    flex-wrap: wrap;
+}
