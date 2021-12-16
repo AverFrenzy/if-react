@@ -1,17 +1,15 @@
-import React from "react";
+import React from 'react';
+import Hotels from '../components/Hotels';
 
-import Heading from "../components/Heading";
-import Hotels from "../components/Hotels";
+const HomesGuestsLoves = (props) => {
+  return (
+    <div className='container'>
+      <div className='homes'>
+        <h2 className='homes__heading'>Homes guests loves</h2>
+        <Hotels hotelsData={props.hotelsData}/>
+      </div>
+    </div>
+  );
+};
 
-const HomesGuestsLoves = () => {
-    return (
-        <div className='container'>
-            <div className='homes'>
-                <Heading headingText='Homes guests loves'/>
-                <Hotels/>
-            </div>
-
-        </div>
-    )
-}
 export default HomesGuestsLoves;

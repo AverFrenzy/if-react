@@ -1,0 +1,14 @@
+.offer {
+    width: 100%;
+    margin: 120px 0;
+}
+.offer__heading::after {
+    content: '';
+    margin: 0 auto;
+    width: 100px;
+    height: 4px;
+    background-color: #F5BD41;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
