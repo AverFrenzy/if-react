@@ -1,28 +1,17 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Hotels from './Hotels';
 
-function AvailableHotels({searchInput, hotelsData}) {
-  const availableHotelsData = [];
+const AvailableHotels = ({foundHotels}) => {
 
-  const findedHotels = hotelsData.filter((item) => {
-        if (item.city.toLowerCase().includes(searchInput.toLowerCase())) {
-          return item;
-        }
-        if (item.country.toLowerCase().includes(searchInput.toLowerCase())) {
-          return item;
-        }
-        if (item.name.toLowerCase().includes(searchInput.toLowerCase())) {
-          return item;
-        }
-    });
   return (
     <div className='container'>
       <div className='homes'>
-        <h2 className='homes__heading'>Available Hotels</h2>
-        <Hotels hotelsData={findedHotels}/>
+        <h2 className='homes__heading'
+            id='available-hotels__heading'>Available Hotels</h2>
+        <Hotels hotelsData={foundHotels}/>
       </div>
     </div>
   );
-}
+};
 
 export default AvailableHotels;

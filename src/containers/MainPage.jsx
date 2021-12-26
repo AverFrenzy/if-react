@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import MainPageForm from '../components/MainPageForm';
 import MainPageApps from '../components/MainPageApps';
 
-const MainPage = ({setIsHotelsVisible, searchInput, setSearchInput}) => {
+const MainPage = ({setIsHotelsVisible, searchInput, setSearchInput,setFoundHotels}) => {
   return (
     <div className='main-page-container'>
       <div className='container'>
@@ -13,6 +13,7 @@ const MainPage = ({setIsHotelsVisible, searchInput, setSearchInput}) => {
         <MainPageForm setIsHotelsVisible={setIsHotelsVisible}
                       setSearchInput={setSearchInput}
                       searchInput={searchInput}
+                      setFoundHotels={setFoundHotels}
         />
         <MainPageApps/>
       </div>
