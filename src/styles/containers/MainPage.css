@@ -1,0 +1,8 @@
+.main-page-container {
+    min-height: 100vh;
+    background-color: #4d4d4d;
+    background-image: url(../../assets/images/main/main-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

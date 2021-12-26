@@ -1,0 +1,9 @@
+.search-form__destination__loupe-icon {
+    display: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    color: #BFBFBF;
+    top: 16px;
+    left: 12px;
+}
