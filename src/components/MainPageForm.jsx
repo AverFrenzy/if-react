@@ -1,11 +1,43 @@
-import React, {useState} from 'react';
+import React from 'react';
 import SearchFormLoupeSVG from './svg/SearchFormLoupeSVG';
+import axios from 'axios';
 
-const MainPageForm = ({setIsHotelsVisible, searchInput, setSearchInput}) => {
+const MainPageForm = ({
+                        setIsHotelsVisible,
+                        searchInput,
+                        setSearchInput,
+                        setFoundHotels
+                      }) => {
 
   const changeInputText = (event) => {
     event.preventDefault();
     setSearchInput(event.target.value);
+  };
+
+  const findHotels = async (event) => {
+    try {
+      if (!searchInput) {
+        alert('write smth in a search string');
+      } else {
+        event.preventDefault();
+        const response = await axios.get('https://fe-student-api.herokuapp.com/api/hotels', {
+          params: {
+            search: searchInput
+          }
+        });
+        setFoundHotels(response.data);
+        setIsHotelsVisible(true);
+        setTimeout(() => {
+          const availableHotelsHeading = document.getElementById('available-hotels__heading');
+          availableHotelsHeading.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }, 0);
+
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -60,10 +92,8 @@ const MainPageForm = ({setIsHotelsVisible, searchInput, setSearchInput}) => {
                id='option-adults-children-rooms'>2 Adults &mdash; 0
           Children &mdash; 1 Room</label>
       </div>
-      <button onClick={(event) => {
-        event.preventDefault();
-        setIsHotelsVisible(true);
-      }} className='search-form__button' id='search-form__button'
+      <button onClick={findHotels} className='search-form__button'
+              id='search-form__button'
               type='submit'>Search
       </button>
     </form>
