@@ -2,7 +2,6 @@ import React from 'react';
 import Hotels from './Hotels';
 
 const AvailableHotels = ({foundHotels}) => {
-
   return (
     <div className='container'>
       <div className='homes'>

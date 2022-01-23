@@ -15,8 +15,8 @@
 }
 select {
   outline: none;
+  border: 1px solid #3077C6;
 }
-
 html,body {
   font-size: 18px;
 }
