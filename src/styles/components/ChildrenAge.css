@@ -1,0 +1,14 @@
+.options-child-age-select {
+    border: 1px solid #3077C6;
+    padding: 4px 8px;
+}
+.options-child-age-select:focus {
+    border: 1px solid #3077C6;
+}
+.options-select-items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    column-gap: 10px;
+    outline: none;
+}

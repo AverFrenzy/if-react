@@ -1,0 +1,30 @@
+.options-item {
+    display: flex;
+    justify-content: space-between;
+}
+.options-item-buttons {
+    display: flex;
+    justify-content: space-between;
+    min-width: 110px;
+}
+.options-button {
+    color: #3077C6;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #3077C6;
+    cursor: pointer;
+    transform: none;
+}
+.options-button:focus {
+    border: 1px solid #3077C6;
+}
+.options-button:disabled {
+    color: #CECECE;
+    border: 1px solid #CECECE;
+}
+.options-counter-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
