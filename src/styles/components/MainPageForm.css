@@ -52,6 +52,7 @@
 .search-form__other-info {
     max-width: 310px;
     width: 100%;
+    position: relative;
 }
 .search-form__other-info__input {
     display: none;

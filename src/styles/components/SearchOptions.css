@@ -1,0 +1,25 @@
+.options {
+    padding: 8px 22px;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    row-gap: 8px;
+    flex-direction: column;
+    width: 278px;
+    background-color: #FFFFFF;
+    right: 32px;
+    top: 68px;
+}
+.options-description-text {
+    display: flex;
+    align-items: center;
+}
+.options-text {
+    font-size: 12px;
+    line-height: 14px;
+}
+.options-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
