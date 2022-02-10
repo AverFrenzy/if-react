@@ -1,4 +1,4 @@
-import React, {useRef, useState} from 'react';
+import React, {useState} from 'react';
 import SearchFormLoupeSVG from './svg/SearchFormLoupeSVG';
 import axios from 'axios';
 import SearchOptions from './SearchOptions';
@@ -12,7 +12,7 @@ const MainPageForm = ({
                         setIsCalendarVisible,
                         setIsOptionsVisible,
                         isCalendarVisible,
-                        isOptionsVisible
+                        isOptionsVisible,
                       }) => {
 
   const [adultsNumber, setAdultsNumber] = useState(1);
@@ -25,8 +25,6 @@ const MainPageForm = ({
   const [prevCalendarYear, setPrevCalendarYear] = useState(new Date().getFullYear());
   const [nextCalendarYear, setNextCalendarYear] = useState(new Date().getFullYear());
 
-  const searchInputRef = useRef(null)
-
   const changeInputText = (event) => {
     event.preventDefault();
     setSearchInput(event.target.value);
@@ -37,12 +35,13 @@ const MainPageForm = ({
   };
 
   const openCalendar = () => {
-    setIsCalendarVisible(true)
-  }
+    setIsCalendarVisible(true);
+  };
 
   const findHotels = async (event) => {
     try {
       if (!searchInput) {
+        event.preventDefault();
         alert('write smth in a search string');
       } else {
         event.preventDefault();
@@ -50,7 +49,7 @@ const MainPageForm = ({
           params: {
             search: searchInput,
             adults: adultsNumber,
-            children : childrenNumber,
+            children: childrenNumber,
             rooms: roomsNumber,
           }
         });
@@ -73,7 +72,8 @@ const MainPageForm = ({
                 method='GET'>
     <div className='search-form__group search-form__destination'>
       <SearchFormLoupeSVG/>
-      <input ref={searchInputRef} value={searchInput} onChange={changeInputText} type='text'
+      <input value={searchInput} onChange={changeInputText}
+             type='text'
              name='search'
              id='search' autoComplete='off'
              className='search-form__destination__input'
@@ -107,7 +107,6 @@ const MainPageForm = ({
                       setNextCalendarYear={setNextCalendarYear}
                       visitingDates={visitingDates}
                       setVisitingDates={setVisitingDates}
-
         />}
     </div>
     <div className='search-form__group search-form__other-info'>

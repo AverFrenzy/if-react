@@ -11,7 +11,7 @@ function FullCalendar({
                         nextCalendarYear,
                         setNextCalendarYear,
                         setVisitingDates,
-                        visitingDates
+                        visitingDates,
                       }) {
   return (
     <div className='calendar-container'>

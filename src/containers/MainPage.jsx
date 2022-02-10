@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Header from '../components/Header';
 import MainPageForm from '../components/MainPageForm';
 import MainPageApps from '../components/MainPageApps';
@@ -11,13 +12,16 @@ const MainPage = ({
                     setIsCalendarVisible,
                     setIsOptionsVisible,
                     isCalendarVisible,
-                    isOptionsVisible
+                    isOptionsVisible,
+                    isLogoutVisible,
+                    setIsLogoutVisible,
                   }) => {
 
   return (
     <div className='main-page-container'>
       <div className='container'>
-        <Header/>
+        <Header isLogoutVisible={isLogoutVisible}
+                setIsLogoutVisible={setIsLogoutVisible}/>
         <h1 className='main-page__heading'>Discover stays <br/>to live, work or
           just relax</h1>
         <MainPageForm setIsHotelsVisible={setIsHotelsVisible}

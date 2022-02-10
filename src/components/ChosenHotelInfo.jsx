@@ -12,7 +12,6 @@ const ChosenHotelInfo = () => {
   const getHotelInfo = async () => {
     try {
       const response = await axios.get(`https://fe-student-api.herokuapp.com/api/hotels/${hotelId}`);
-      console.log(response.data);
       setHotelInfo(response.data);
     } catch (error) {
       console.log(error);
