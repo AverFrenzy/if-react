@@ -1,0 +1,61 @@
+.chosen-hotel-container {
+    background-color: #BFBFBF;
+    min-height: 100vh;
+    background-image: url(../../assets/images/main/main-img.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+}
+.chosen-hotel-details {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+.chosen-hotel-buttons {
+    width: 100%;
+    height: 42px;
+    display: flex;
+    justify-content: space-between;
+}
+.chosen-hotel-button {
+    max-width: 230px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #3077C6;
+    color: white;
+    font-size: 20px;
+    border: 1px #6d66c5 solid;
+    cursor: pointer;
+}
+.chosen-hotel-booking-button {
+    max-width: 474px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #F5BD41;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+.chosen-hotel-details-heading {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 2.5em;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 3px black;
+}
+.chosen-hotel-details-text {
+    font-size: 20px;
+    line-height: 1.7em;
+    white-space: nowrap;
+    color: #FFFFFF;
+    text-shadow: 1px 2px 3px black;
+}
+.chosen-hotel-name {
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+}
+.chosen-hotel-city{
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+    margin-bottom: 10px;
+}

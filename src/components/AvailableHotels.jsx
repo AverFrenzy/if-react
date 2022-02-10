@@ -1,8 +1,10 @@
 import React from 'react';
+import {connect} from 'react-redux';
+
 import Hotels from './Hotels';
 
-const AvailableHotels = ({foundHotels}) => {
 
+const AvailableHotels = ({foundHotels}) => {
   return (
     <div className='container'>
       <div className='homes'>
@@ -14,4 +16,8 @@ const AvailableHotels = ({foundHotels}) => {
   );
 };
 
-export default AvailableHotels;
+const mapStateToProps = (state) => ({
+  foundHotels: state.foundHotels,
+});
+
+export default connect(mapStateToProps)(AvailableHotels);

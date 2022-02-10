@@ -1,0 +1,17 @@
+.logout-container {
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    right: 0px;
+    top: 55px;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 150px;
+    height: 30px;
+    padding-left: 16px;
+    border: 1px solid #CECECE;
+    cursor: pointer;
+}
+.logout-text {
+    font-size: 17px;
+}

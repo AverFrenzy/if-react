@@ -1,10 +1,28 @@
-import React from 'react';
+import React, {useRef} from 'react';
+import {connect} from 'react-redux';
+
 import HeaderLogoSVG from './svg/Header/HeaderLogoSVG';
 import HeaderAccountSVG from './svg/Header/HeaderAccountSVG';
 import HeaderThemeSVG from './svg/Header/HeaderThemeSVG';
 import HeaderMenuSVG from './svg/Header/HeaderMenuSVG';
+import Logout from './Logout';
+import {
+  setIsLogoutVisibleActionCreator
+} from '../actionCreators';
 
-const Header = () => {
+
+const Header = ({
+                  isLogoutVisible, setIsLogoutVisible, userName
+                }) => {
+  const ref = useRef(null);
+
+  const showLogout = (event) => {
+    event.stopPropagation();
+    if (event.currentTarget === ref.current && userName) {
+      isLogoutVisible ? setIsLogoutVisible(false) : setIsLogoutVisible(true);
+    }
+  };
+
   return (
     <header className='header'>
       <div className='header__logo-container'>
@@ -21,10 +39,13 @@ const Header = () => {
               <HeaderThemeSVG/>
             </a>
           </div>
-          <div className='header-links__img-links__account'>
+          <div onClick={showLogout}
+               ref={ref}
+               className='header-links__img-links__account'>
             <a href='#'>
-              <HeaderAccountSVG/>
+              <HeaderAccountSVG isLogoutVisible={isLogoutVisible}/>
             </a>
+            {(userName && isLogoutVisible) && <Logout/>}
           </div>
           <div className='header-links__img-links__menu'>
             <a href='#'>
@@ -37,4 +58,15 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => ({
+  isLogoutVisible: state.isLogoutVisible,
+  userName: state.userName,
+  userPassword: state.userPassword
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    setIsLogoutVisible: (value) => dispatch(setIsLogoutVisibleActionCreator(value)),
+  }
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

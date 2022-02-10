@@ -1,9 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import Hotels from '../components/Hotels';
+import React, {useEffect} from 'react';
+import {connect} from 'react-redux';
 import axios from 'axios';
 
-const HomesGuestsLoves = () => {
-  const [homesHotels, setHomesHotels] = useState([]);
+import Hotels from '../components/Hotels';
+import {setHomesHotelsActionCreator,} from '../actionCreators';
+
+
+const HomesGuestsLoves = ({homesHotels, setHomesHotels}) => {
 
   const getHomesHotels = async () => {
     try {
@@ -13,6 +16,7 @@ const HomesGuestsLoves = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getHomesHotels();
   }, []);
@@ -27,4 +31,14 @@ const HomesGuestsLoves = () => {
   );
 };
 
-export default HomesGuestsLoves;
+const mapStateToProps = (state) => ({
+  homesHotels: state.homesHotels,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+    setHomesHotels: (hotelsData) => dispatch(setHomesHotelsActionCreator(hotelsData)),
+  }
+);
+
+export default connect(mapStateToProps, mapDispatchToProps)(HomesGuestsLoves);
+

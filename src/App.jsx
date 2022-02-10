@@ -1,31 +1,28 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import store from './store';
 
-import HomesGuestsLoves from './containers/HomesGuestsLoves';
-import MainPage from './containers/MainPage';
-import WhatDoWeOffer from './containers/WhatDoWeOffer';
-import Footer from './containers/Footer';
-import AvailableHotels from './components/AvailableHotels';
+import HomePage from './components/HomePage';
+import ChosenHotelInfo from './components/ChosenHotelInfo';
+import LoginPage from './components/LoginPage';
+import RequireAuth from './hoc/RequireAuth';
+
 
 const App = () => {
-  const [isHotelsVisible, setIsHotelsVisible] = useState(false);
-  const [searchInput, setSearchInput] = useState('');
-  const [foundHotels, setFoundHotels] = useState([]);
-
   return (
-    <div className='App'>
-      <MainPage setIsHotelsVisible={setIsHotelsVisible}
-                searchInput={searchInput}
-                setSearchInput={setSearchInput}
-                setFoundHotels={setFoundHotels}
-      />
-      {isHotelsVisible ?
-        <AvailableHotels searchInput={searchInput}
-                         foundHotels={foundHotels}
-        /> : null}
-      <WhatDoWeOffer/>
-      <HomesGuestsLoves/>
-      <Footer/>
-    </div>
+      <Provider store={store}>
+        <Routes>
+          <Route path='/' element={
+            <RequireAuth>
+              <HomePage/>
+            </RequireAuth>
+          }/>
+          <Route path='/login'
+                 element={<LoginPage/>}/>
+          <Route path='/hotel/:hotelId' element={<ChosenHotelInfo/>}/>
+        </Routes>
+      </Provider>
   );
 };
 

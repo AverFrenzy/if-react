@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 48px;
-    margin-bottom: 196px;
+    margin-bottom: 20px;
 }
 .header-links {
     flex: 0 0 27.7%;
@@ -43,4 +43,7 @@
 }
 .header__img:hover {
     fill:#F5BD41;
+}
+.header-links__img-links__account {
+    position: relative;
 }

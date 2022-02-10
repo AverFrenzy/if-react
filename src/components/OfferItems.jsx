@@ -1,4 +1,5 @@
 import React from 'react';
+
 import BookOnlineSVG from './svg/WhatDoWeOffer/BookOnlineSVG';
 import CommunicateSVG from './svg/WhatDoWeOffer/CommunicateSVG';
 import SupportSVG from './svg/WhatDoWeOffer/SupportSVG';
@@ -28,7 +29,7 @@ const OfferItems = () => {
       text: 'Real guest reviews',
     }
   ];
-  const OfferData = data.map(({id,text,svg}) => (
+  const OfferData = data.map(({id, text, svg}) => (
     <OfferItem
       key={id}
       text={text}

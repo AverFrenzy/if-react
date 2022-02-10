@@ -1,4 +1,5 @@
 import React from 'react';
+
 import OfferItems from '../components/OfferItems';
 
 const WhatDoWeOffer = () => {
@@ -6,7 +7,7 @@ const WhatDoWeOffer = () => {
     <div className='container'>
       <div className='offer'>
         <h2 className='offer__heading'>What do we offer</h2>
-        <OfferItems />
+        <OfferItems/>
       </div>
     </div>
   );
