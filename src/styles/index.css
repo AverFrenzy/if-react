@@ -12,11 +12,12 @@
   font-style: normal;
   box-sizing: border-box;
   font-weight: 400;
+  user-select: none;
 }
 select {
   outline: none;
+  border: 1px solid #3077C6;
 }
-
 html,body {
   font-size: 18px;
 }
@@ -31,6 +32,13 @@ h2 {
   text-align: center;
   font-weight: 500;
   font-size: 40px;
+  line-height: 47px;
+  color: #383838;
+}
+h3 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 34px;
   line-height: 47px;
   color: #383838;
 }

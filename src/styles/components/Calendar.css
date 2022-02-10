@@ -1,0 +1,125 @@
+.calendar-container {
+    padding-top: 12px;
+    position: absolute;
+    border-radius: 8px;
+    display: flex;
+    width: 580px;
+    background-color: white;
+    right: 2px;
+    top: 68px;
+}
+.calendar {
+    padding: 0px 22px 18px 22px;
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+}
+.calendar-month {
+    padding-left: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+.calendar-days-name-box {
+    margin-top: 12px;
+    display: flex;
+}
+.calendar-days-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4D4D4D;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    width: 35px;
+    height: 35px;
+}
+.calendar-days-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+.calendar-days {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color:#4D4D4D;;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.calendar-days-unactive {
+    color:#BFBFBF;
+}
+.calendar-days-clicked {
+    background: #3077C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+.calendar-days-active {
+    background: #F3F3F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color:#4D4D4D;
+    width: 35px;
+    height: 35px;
+}
+.calendar-days-curr-day {
+    cursor: pointer;
+    color: #3077C6;
+    background-color: cornsilk;
+}
+.calendar-month-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.calendar-button-prev {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #BFBFBF;
+    border-right: 2px solid #BFBFBF;
+    border-radius: 2px;
+    transform: rotate(225deg);
+    background-color: white;
+    cursor: pointer;
+}
+.calendar-button-prev:focus {
+    border-top: 2px solid #BFBFBF;
+    border-right: 2px solid #BFBFBF;
+    border-radius: 2px;
+    border-bottom: none;
+    border-left: none;
+}
+.calendar-button-next {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #BFBFBF;
+    border-right: 2px solid #BFBFBF;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background-color: white;
+    cursor: pointer;
+}
+.calendar-button-next:focus {
+    border-bottom: none;
+    border-left: none;
+    border-top: 2px solid #BFBFBF;
+    border-right: 2px solid #BFBFBF;
+    border-radius: 2px;
+}
