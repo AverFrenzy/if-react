@@ -1,31 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
+import {Routes, Route} from 'react-router-dom';
 
-import HomesGuestsLoves from './containers/HomesGuestsLoves';
-import MainPage from './containers/MainPage';
-import WhatDoWeOffer from './containers/WhatDoWeOffer';
-import Footer from './containers/Footer';
-import AvailableHotels from './components/AvailableHotels';
+import HomePage from './components/HomePage';
+
+import ChosenHotelInfo from './components/ChosenHotelInfo';
 
 const App = () => {
-  const [isHotelsVisible, setIsHotelsVisible] = useState(false);
-  const [searchInput, setSearchInput] = useState('');
-  const [foundHotels, setFoundHotels] = useState([]);
 
   return (
-    <div className='App'>
-      <MainPage setIsHotelsVisible={setIsHotelsVisible}
-                searchInput={searchInput}
-                setSearchInput={setSearchInput}
-                setFoundHotels={setFoundHotels}
-      />
-      {isHotelsVisible ?
-        <AvailableHotels searchInput={searchInput}
-                         foundHotels={foundHotels}
-        /> : null}
-      <WhatDoWeOffer/>
-      <HomesGuestsLoves/>
-      <Footer/>
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePage />}/>
+      {/*<Route path='/hotel/'element={<ChosenHotelInfo />}/>*/}
+      <Route path='/hotel/:hotelId' element={<ChosenHotelInfo />}/>
+    </Routes>
   );
 };
 

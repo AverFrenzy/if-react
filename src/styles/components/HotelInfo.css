@@ -1,0 +1,59 @@
+.hotel-info {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+.hotel-info-description-text {
+    font-size: 18px;
+    line-height: 1.5em;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px black;
+}
+.hotel-info-description {
+    padding-top: 25px;
+    width: 30%;
+}
+.hotel-info-img-wrapper {
+    width: 100%;
+}
+.hotel-info-img {
+    width: 650px;
+    height: 400px;
+    border-radius: 8px;
+    border: 1px #657dfa solid;
+}
+.hotel-info-extended {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.hotel-info-extended-item {
+    width: 90px;
+    height: 90px;
+}
+.hotel-info-rate {
+    background-color: #10367C;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#FFFFFF;
+    border: 1px #6d66c5 solid;
+    font-size: 24px;
+}
+.hotel-info-reviews {
+    background-color: #10367C;
+    border-radius: 8px;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color:#FFFFFF;
+    border: 1px #6d66c5 solid;
+    line-height: 1.6em;
+}

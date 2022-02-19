@@ -13,6 +13,7 @@ const HomesGuestsLoves = () => {
       console.log(error);
     }
   };
+
   useEffect(() => {
     getHomesHotels();
   }, []);
