@@ -44,3 +44,6 @@
 .header__img:hover {
     fill:#F5BD41;
 }
+.header-links__img-links__account {
+    position: relative;
+}

@@ -9,16 +9,15 @@ const SearchOptions = ({
                          roomsNumber,
                          setRoomsNumber,
                          setChildrenNumber,
-                         setAdultsNumber
+                         setAdultsNumber,
                        }) => {
-
   const childrenAgeArr = [];
   for (let i = 0; i < childrenNumber; i++) {
     childrenAgeArr.push(<ChildrenAge key={i}/>);
   }
 
   return (
-    <div className='options' id='options'>
+    <div  className='options' id='options'>
       <div className='options-items' id='options-items'>
         <SearchOptionItem text={'Adults'} number={adultsNumber}
                           setNumber={setAdultsNumber}
